@@ -16,7 +16,7 @@ d2=dict([
 print(d2)
 
 
-#Funciones 
+#Funcion get
 print("funcion get "d2.get('nombre'))
 
 
