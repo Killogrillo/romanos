@@ -46,12 +46,52 @@ centenas={
 }
 
 
+  #M C D U
+  #0 1 2 3
+ #[0 9 6 9]
+#[0000,900,60,9]
+
+#guardar el numero string en una lista
+valor="000300306"
+numeros=list(valor)
+print(numeros)
+
+#añadir ceros
+valorBuscado= "{:0>4d}".format(1)
+print(valorBuscado)
 
 
-
+#meta cumplir con esta funcion 
 def entero_a_romano(num):
-    return "MCMXCIV"
+    '''
+    num = str(num)
+    longitud = len(num)-num[]
+    if longitud < 4:
+        "{:0>4d}".format()
+    lista_numeros = list(num) 
+    return lista_numeros
+    '''
+    lista = []
+    num = str(num)
+
+    if len(num)<4:
+       num = "{:0>4s}".format(num)
+    # for digito in num:
+    #        lista.append(digito)
+    lista = list(num) 
+    for i in range(len(lista)):
+        lista[i] = lista[i]+"0"*((len(lista)-1 )-i)
+    print(lista)
+
+    return lista
+
+#Nuevo objetivo devolver 336 a CCCXXXVI
+
+.\entorno_virtual\Scripts\activate
 
 
-for c,v in diccionario.items():
-    print(c+"-"+str(v))
+
+
+print("funcion en accion",entero_a_romano(336))
+
+
